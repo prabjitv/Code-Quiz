@@ -1,3 +1,25 @@
+
+
+
+pseudo code
+1. Click start
+ - make event listener for onclick
+    - timer starts counting down
+    - heading changes to question
+    - start button is now the answer choices
+    - progress bar grows
+
+2. timer starts
+ - make a big block for each step to run inside
+3. questions start
+4. answering a question leads to another
+5. wrong answers subtract time
+6. all questions answers OR time = 0
+7. Game over shows score and lets user enter initials
+8. score and initials get saved in ranked list
+9. user is presented with start screen
+
+
 # 04 Web APIs: Code Quiz
 
 As you proceed in your career as a web developer, you will probably be asked to complete a coding assessment, which is typically a combination of multiple-choice questions and interactive challenges. Build a timed code quiz with multiple-choice questions. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.

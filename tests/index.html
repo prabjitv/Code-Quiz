@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<body>
+    <p id="text"></p>
+    <button class="answer" id="a"></button>
+    <button class="answer" id="b"></button>
+    <button class="answer" id="c"></button>
+    <script>
+        var currentQuestion = 0;
+        var questions = [
+            {
+                text: "What does Chewie use to yeet stormtroopers?",
+                choices: [
+                    "Gunz",
+                    "Bowcaster",
+                    "R2D2's Bod"
+                ],
+                answer: "Bowcaster"
+            },
+            {
+                text: "How many engines does the Millienium Falcon have?",
+                choices: [
+                    "5",
+                    "6",
+                    "13"
+                ],
+                answer: "13"
+            }
+        ]
+        function displayQuestion() {
+            var text = document.getElementById("text");
+            text.textContent = questions[currentQuestion].text
+            var a = document.getElementById("a");
+            a.textContent = questions[currentQuestion].choices[0]
+            var b = document.getElementById("b");
+            b.textContent = questions[currentQuestion].choices[1]
+            var c = document.getElementById("c");
+            c.textContent = questions[currentQuestion].choices[2]
+        }
+        displayQuestion();
+    </script>
+</body>
