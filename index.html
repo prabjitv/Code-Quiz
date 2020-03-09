@@ -40,11 +40,22 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="col-sm-1"></div>
-                <div id="ansSection" class="col-sm-6">
+                <div id="ansSection1" class="col-sm-6">
                     <button class="answer" id="a"></button>
                     <button class="answer" id="b"></button>
                     <button class="answer" id="c"></button>
                 </div>
+                <!-- <div id="ansSection2" class="col-sm-6">
+                    <button class="answer" id="a"></button>
+                    <button class="answer" id="b"></button>
+                    <button class="answer" id="c"></button>
+                </div>
+                <div id="ansSection3" class="col-sm-6">
+                    <button class="answer" id="a"></button>
+                    <button class="answer" id="b"></button>
+                    <button class="answer" id="c"></button>
+                </div> -->
+
             </div>
 
         </div>
@@ -74,18 +85,24 @@
 
 
         var countDown = 500;
+        userScore = "";
+        incorrectChoice = "";
+
         // pseudo code
         // 1. Click start
 
         document.getElementById("quizBtn").innerHTML = "Start";
         document.getElementById("heading").innerHTML = "Time to take this quiz!";
-        document.getElementById("ansSection").style.visibility = "hidden";
+        document.getElementById("ansSection1").style.visibility = "hidden";
+        // document.getElementById("ansSection2").style.visibility = "hidden";
+        // document.getElementById("ansSection3").style.visibility = "hidden";
+
         // heading.style.display = ;
 
 
         //  - make event listener for onclick
 
-        var startClick = document.getElementById("quizBtn").addEventListener("click", function () {
+        document.getElementById("quizBtn").addEventListener("click", function () {
 
             // - timer starts counting down
 
@@ -107,7 +124,8 @@
             document.getElementById("heading").innerHTML = "Question 1";
 
             // - answer link buttons appear
-            document.getElementById("ansSection").style.visibility = "visible";
+            // answer section1
+            document.getElementById("ansSection1").style.visibility = "visible";
             var currentQuestion = 0;
             var questions = [
                 {
@@ -124,11 +142,22 @@
                     choices: [
                         "jCrew",
                         "jQuery",
-                        "jDIlla"
+                        "jDilla"
                     ],
-                    answer: "Document Object Model"
+                    answer: "jQuery"
                 },
+                {
+                    text: "Which uses Javascript?",
+                    choices: [
+                        "jCrew",
+                        "jQuery",
+                        "jDilla"
+                    ],
+                    answer: "jQuery"
+                },
+
             ]
+
             function displayQuestion() {
                 var text = document.getElementById("heading");
                 text.textContent = questions[currentQuestion].text
@@ -139,40 +168,38 @@
                 var c = document.getElementById("c");
                 c.textContent = questions[currentQuestion].choices[2]
             }
-            displayQuestion();
+
+            // function choiceMade(){
+            //     document.getElementById("a").addEventListener("click", function () {
+            //     if (questions[currentQuestion].choices[0] === questions[currentQuestion].answer[0])
+            //     userScore++;
+            //     console.log(userScore)
+            //     else incorrectChoice++
+            //     })
+
+            // }
+
+            // displayQuestion();
+            // for (i = 0; i < 3; i++) {
+
+            //     choiceMade();
+            //     currentQuestion++
+
+            // }
 
 
-            // <button type="button" class="answer1A btn btn-secondary btn-lg btn-block">Block level button</button >
-            // <button type="button" class="answer1B btn btn-secondary btn-lg btn-block">Block level button</button>
-            // <button type="button" class="answer1C btn btn-secondary btn-lg btn-block">Block level button</button>
-            // <button type="button" class="answer1D btn btn-secondary btn-lg btn-block">Block level button</button>
+            // 4. answering a question leads to another
+
 
         })
 
     // - progress bar grows
 
-    // 2. timer starts
-    //  - make a big block for each step to run inside
-    // 3. questions start
-    // 4. answering a question leads to another
     // 5. wrong answers subtract time
     // 6. all questions answers OR time = 0
     // 7. Game over shows score and lets user enter initials
     // 8. score and initials get saved in ranked list
     // 9. user is presented with start screen
-
-
-    // document.getElementById("quizBlock"). = 
-
-
-
-
-    //     <button type="button" class="answer2A btn btn-secondary btn-lg btn-block">Block level button</button>
-    //     <button type="button" class="answer2B btn btn-secondary btn-lg btn-block">Block level button</button>
-    //     <button type="button" class="answer2C btn btn-secondary btn-lg btn-block">Block level button</button>
-    //     <button type="button" class="answer2D btn btn-secondary btn-lg btn-block">Block level button</button>
-
-
 
 
     </script>

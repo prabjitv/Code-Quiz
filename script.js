@@ -15,7 +15,7 @@
 
 
 var countDown = 500;
-var start = START;
+var start = "START";
 // pseudo code
 // 1. Click start
 
